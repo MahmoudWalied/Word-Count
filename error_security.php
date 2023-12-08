@@ -1,6 +1,6 @@
 <?php
 
-class errorAndSecurityFunctions {
+class errorSecurity {
 	public static function sanitizeLocation( $input ) {
 		if ( $input !== '0' and $input !== '1' ) {
 			add_settings_error(

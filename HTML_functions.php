@@ -1,6 +1,6 @@
 <?php
 
-class HtmlFunctions {
+class HTMLfunctions {
 
 	public static function checkboxFunctionsHtml( $args ) { ?>
 		<?php $name = $args['checkBoxName']; ?>

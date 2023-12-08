@@ -7,8 +7,8 @@
  * Author: Mahmoud Walied
  */
 
-require_once "HtmlFunctions.php";
-require_once "errorAndSecurityFunctions.php";
+require_once "HTML_functions.php";
+require_once "error_security.php";
 
 class WordCountAndTimePlugin {
 	function __construct() {
@@ -65,7 +65,7 @@ class WordCountAndTimePlugin {
 			'Word Count',
 			'manage_options',
 			'word-count-settings',
-			array( 'HtmlFunctions', 'ourHTML' )
+			array( 'HTMLfunctions', 'ourHTML' )
 		);
 	}
 
@@ -83,7 +83,7 @@ class WordCountAndTimePlugin {
 		add_settings_field(
 			'wcp_location',
 			'Display Location',
-			array( 'HtmlFunctions', 'locationHTML' ),
+			array( 'HTMLfunctions', 'locationHTML' ),
 			'word-count-settings',
 			'wcp_first_section'
 		);
@@ -92,7 +92,7 @@ class WordCountAndTimePlugin {
 			'wordcountplugin',
 			'wcp_location',
 			array(
-				'sanitize_callback' => array( 'errorAndSecurityFunctions', 'sanitizeLocation' ),
+				'sanitize_callback' => array( 'errorSecurity', 'sanitizeLocation' ),
 				'default'           => '0'
 			)
 		);
@@ -103,7 +103,7 @@ class WordCountAndTimePlugin {
 		add_settings_field(
 			'wcp_headline',
 			'Headline Text',
-			array( 'HtmlFunctions', 'headlineHTML' ),
+			array( 'HTMLfunctions', 'headlineHTML' ),
 			'word-count-settings',
 			'wcp_first_section'
 		);
@@ -123,7 +123,7 @@ class WordCountAndTimePlugin {
 		add_settings_field(
 			'wcp_wordcount',
 			'Word Count',
-			array( 'HtmlFunctions', 'checkboxFunctionsHtml' ),
+			array( 'HTMLfunctions', 'checkboxFunctionsHtml' ),
 			'word-count-settings',
 			'wcp_first_section',
 			array( 'checkBoxName' => 'wcp_wordcount' )
@@ -144,7 +144,7 @@ class WordCountAndTimePlugin {
 		add_settings_field(
 			'wcp_charactercount',
 			'Character Count',
-			array( 'HtmlFunctions', 'checkboxFunctionsHtml' ),
+			array( 'HTMLfunctions', 'checkboxFunctionsHtml' ),
 			'word-count-settings',
 			'wcp_first_section',
 			array( 'checkBoxName' => 'wcp_charactercount' )
@@ -165,7 +165,7 @@ class WordCountAndTimePlugin {
 		add_settings_field(
 			'wcp_readtime',
 			'Read Count',
-			array( 'HtmlFunctions', 'checkboxFunctionsHtml' ),
+			array( 'HTMLfunctions', 'checkboxFunctionsHtml' ),
 			'word-count-settings',
 			'wcp_first_section',
 			array( 'checkBoxName' => 'wcp_readtime' )
