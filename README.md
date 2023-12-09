@@ -1,7 +1,7 @@
 # Word Count Plugin
 
 ## Description
-This plugin is designed to tally the number of words and characters in addition to calculating the estimated reading time for a chosen post.
+This plugin is designed to count the number of words and characters in addition to calculating the estimated reading time for a chosen post.
 
 ## Instructions
 
